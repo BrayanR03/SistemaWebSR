@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function(){
-    return view('auth.login');
+    return view('home');
 });
 //Route::view('/','home');
 Route::get('areas','App\Http\Controllers\AreaController@index')->name('areas.index');
 
-//Route::post('login','App\Http\Controllers\Auth\LoginController@valida')->name('login.val');
+Route::post('login','App\Http\Controllers\Auth\LoginController@valida')->name('login.val');
 
 Route::get('apoderado/{apoderado}/editar','App\Http\Controllers\ApoderadoController@edit')->name('apoderado.edit');
 Route::patch('apoderado/{apoderado}','App\Http\Controllers\ApoderadoController@update')->name('apoderado.update');

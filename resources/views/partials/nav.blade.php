@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">  
     <meta name="author" content="AcademyView">
     <meta name="description" content="Esta es una página web de visualizacion academica">  
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Michroma&display=swap" rel="stylesheet">
     <title>@yield('title')</title>
 </head>
 <body>
-    <style>
+    <!--<style>
         
 :root{
     --fuente-logo: 'Michroma', sans-serif;
@@ -330,7 +330,7 @@ nav a:hover{
     margin-top: 20px;
     width: 1000px;    
 }
-    </style>
+    </style>-->
     <nav>
         <div class="title-logo">
             <img src="{{asset('assets/Black White Modern Luxury Logo.png')}}" alt="logo">

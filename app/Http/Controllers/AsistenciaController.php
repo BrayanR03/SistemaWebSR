@@ -34,6 +34,7 @@ class AsistenciaController extends Controller
     }
     public function indexarea($AreaID)
     {
+        
         $user_id=session('id');
         $apoderado = Apoderado::where('UsuarioID', $user_id)->first();
         if($apoderado){
@@ -42,6 +43,7 @@ class AsistenciaController extends Controller
             foreach ($alumnos as $alumno) {
                 if ($alumno->asistencias) {
                     $asistencias = $asistencias->concat($alumno->asistencias->where('AreaID',$AreaID));
+                    //dd($asistencias);
                 }
                 $areasAlumno = $alumno->areas()->get();
             $alumno->areas = $areasAlumno;
