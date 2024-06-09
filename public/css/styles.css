@@ -95,32 +95,6 @@ body{
     width: 65px;
 }
 /*RESPONSIVE LOGO DE ACADEMYVIEW*/
-@media (max-width: 768px) {
-    .title-logo {
-        min-width: 0;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .title-logo img {
-        width: 50px; /* Ajusta el tamaño según sea necesario */
-    }
-
-    .title-logo h1 {
-        font-size: 1.5rem; /* Ajusta el tamaño del texto según sea necesario */
-    }
-}
-
-@media (max-width: 480px) {
-    .title-logo img {
-        width: 40px; /* Ajusta el tamaño según sea necesario */
-    }
-
-    .title-logo h1 {
-        font-size: 1.2rem; /* Ajusta el tamaño del texto según sea necesario */
-    }
-}
 
 nav{
     width: 100%;
@@ -148,34 +122,6 @@ nav a{
 
 nav a:hover{
     border-bottom: solid 1px #fff;
-}
-/*RESPONSIVE NAV*/
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    nav a {
-        padding: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        padding: 10px 0;
-        width: 100%;
-        text-align: left;
-        padding-left: 20px;
-    }
 }
 /*==========================================================*/
 .btn-logout{

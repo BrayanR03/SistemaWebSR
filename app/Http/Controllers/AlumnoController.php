@@ -77,7 +77,7 @@ class AlumnoController extends Controller
     public function update(Alumno $alumno,CreateAlumnoRequest $request)
     {
         if ($request->hasFile('image')) {
-           // Storage::delete($alumno->image);
+            Storage::delete($alumno->image);
             $alumno->fill($request->validated());
             $alumno->image=$request->file('image')->store('images');
             $alumno->save();

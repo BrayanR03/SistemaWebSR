@@ -67,7 +67,7 @@ class ApoderadoController extends Controller
     public function update(CreateApoderadoRequest $request, Apoderado $apoderado)
     {
         if ($request->hasFile('image')) {
-           // Storage::delete($apoderado->image);
+            //Storage::delete($apoderado->image);
             $apoderado->fill($request->validated());
             $apoderado->image=$request->file('image')->store('images');
             $apoderado->save();

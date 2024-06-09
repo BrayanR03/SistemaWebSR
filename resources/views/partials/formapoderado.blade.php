@@ -26,9 +26,9 @@
         <tr>
             <th>FOTO PERFIL</th>
             <td>
-                @auth
+                
                     <img src="/storage/{{$apoderado->image}}" alt="{{$apoderado->Nombres}} " width="50" height="50">
-                @endauth
+                
             </td>
         </tr>
         <tr>

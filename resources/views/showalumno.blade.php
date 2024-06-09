@@ -25,7 +25,7 @@
                 <td>{{$alumno->GradoSeccionID}}</td>
             </tr>
             <tr>
-                <td><img src="/storage/{{$alumno->image}}" alt="{{$alumno->Nombres}}" width="50" height="50"></td>
+                <td><img src="/storage/{{$alumno->image}}" alt="{{$alumno->Nombres}}" width="100" height="100"></td>
             </tr>
         </table>
         <tr><a href="{{route('alumno.edit',$alumno)}}">EDITAR</a></tr>

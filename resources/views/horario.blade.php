@@ -3,7 +3,7 @@
     @section('content')
 
     <div class="box-horario">
-        <img class="img-horario" src="{{asset('assets/horario.jpeg')}}" alt="horario">
+        <img class="img-horario" src="{{asset('assets/horario_2024.jpeg')}}" alt="horario">
     </div>
     
 

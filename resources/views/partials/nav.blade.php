@@ -341,7 +341,7 @@ nav a:hover{
             <tr><a href="/">INICIO</a></tr>
             <tr><a href="{{route('apoderado.index')}}">PERFIL APODERADO</a></tr>
             <tr><a href="{{route('alumno.index')}}">PERFIL ESTUDIANTE</a></tr>
-            <tr><a href="{{route('horario')}}">HORARIO 2023</a></tr>
+            <tr><a href="{{route('horario')}}">HORARIO 2024</a></tr>
             <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
