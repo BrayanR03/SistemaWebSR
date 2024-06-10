@@ -60,7 +60,7 @@ class ApoderadoController extends Controller
             'apoderado'=>$apoderado
         ]);
     }
-
+   
     /**
      * Update the specified resource in storage.
      */

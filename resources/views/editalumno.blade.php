@@ -2,7 +2,7 @@
 @section('title','Editar Alumno')
     @section('content')
     @include('partials.validation-errors')
-        <form action="{{route('alumno.update',$alumno)}}" enctype="multipart/form-data" method="post">
+        <form action="{{route('alumno.update',$alumno)}}" enctype="multipart/form-data" method="post" class="form-editar">
            
             
             @method('PATCH')

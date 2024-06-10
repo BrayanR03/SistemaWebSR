@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <th>UsuarioID</th>
-            <td><input type="text" name="UsuarioID" id="UsuarioID" value="{{old('UsuarioID',$apoderado->UsuarioID)}}"></td>
+            <td><input type="text" name="UsuarioID" id="UsuarioID" value="{{old('UsuarioID',$apoderado->UsuarioID)}}" readonly></td>
         </tr>
         <tr>
             <td><button>{{$btnText}}</button></td>

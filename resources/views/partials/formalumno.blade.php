@@ -1,6 +1,6 @@
 @csrf
 
-<div class="box-editar">
+<div class="box-editar-alumno">
     <table>
         <tr>
             <th>Apellidos</th>
@@ -23,7 +23,6 @@
             <td><input type="text" name="Telefono" id="Telefono" value="{{old('Telefono',$alumno->Telefono)}}"></td>
         </tr>
         <tr>
-            
             <th>FOTO PERFIL</th>
             <td>
                 @auth
@@ -37,11 +36,11 @@
         </tr>
         <tr>
             <th>ApoderadoID</th>
-            <td><input type="text" name="ApoderadoID" id="ApoderadoID" value="{{old('ApoderadoID',$alumno->ApoderadoID)}}"></td>
+            <td><input type="text" name="ApoderadoID" id="ApoderadoID" value="{{old('ApoderadoID',$alumno->ApoderadoID)}}" readonly></td>
         </tr>
         <tr>
             <th>GradoSeccionID</th>
-            <td><input type="text" name="GradoSeccionID" id="GradoSeccionID" value="{{old('GradoSeccionID',$alumno->GradoSeccionID)}}"></td>
+            <td><input type="text" name="GradoSeccionID" id="GradoSeccionID" value="{{old('GradoSeccionID',$alumno->GradoSeccionID)}}" readonly></td>
         </tr>
         <tr>
             <td><button>{{$btnText}}</button></td>

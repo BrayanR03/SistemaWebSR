@@ -15,7 +15,7 @@
                 <div class="box-perfil-btnEditar">
                     <h2>PERFIL</h2>
                     @if ($apoderado->image)
-                    <img src="/storage/{{$apoderado->image}}" alt="{{$apoderado->Nombres}}" width="50" height="50">
+                    <img src="/storage/{{$apoderado->image}}" alt="{{$apoderado->Nombres}}" width="100" height="100">
                 @endif
 
                 <a href="{{route('apoderado.edit',$apoderado)}}">EDITAR PERFIL</a>

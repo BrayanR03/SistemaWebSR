@@ -1,9 +1,10 @@
 @extends('layout')
 @section('title','Areas Informacion')
-    @section('content')
-    <div class="box-areas">
-        <h1>Información Area</h1>
-        <table>
+@section('content')
+<div class="container-show-areas">
+    <div class="box-areas-info">
+        <h1 class="title-area-info">Información del Área</h1>
+        <table class="table-area-info">
             <tr>
                 <th>Area ID</th>
                 <th>NOMBRE DEL AREA</th>
@@ -15,9 +16,8 @@
                 <td>{{$area->docente->Apellidos.','.$area->docente->Nombres}}</td>
             </tr>
         </table>
-        <h1>Horarios de Atención Del Docente del Área</h1>
-        <table>
-            
+        <h1 class="title-horario">Horarios de Atención del Docente del Área</h1>
+        <table class="table-horario">
             <tr>
                 <th>Lunes</th>
                 <th>Martes</th>
@@ -31,9 +31,9 @@
                 <td>11:00 AM - 11:30 AM</td>
                 <td>09:00 AM - 10:00 AM</td>
                 <td>10:00 AM - 11:00 AM</td>
-            </tr>            
+            </tr>
         </table>
         <a class="btn-regresar" href="{{route('areas.index')}}">REGRESAR</a>
     </div>
-
+</div>
 @endsection

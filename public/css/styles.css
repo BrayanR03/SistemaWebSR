@@ -1,317 +1,563 @@
+/* Archivo: public/css/styles.css */
 
-:root{
-    --fuente-logo: 'Michroma', sans-serif;
-    --fuente-enlaces: 'Julius Sans One', sans-serif;
-    /* font-family: 'Julius Sans One', sans-serif; */
-/* font-family: 'Michroma', sans-serif; */
-}
-
-
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
+/* Estilos generales */
+body {
+    font-family: 'Julius Sans One', sans-serif;
     margin: 0;
-    background-color: #2C1E4A;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F0F0F0;
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #595ae8;
-}
-
-.box-login { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    padding: 20px 0;
-    background-color: #fff;
-    border-radius: 10px;    
-}
-
-.box-login label{
-    font-size: 18px;
-}
-
-.box-login input{
-    width: 170px;
-    height: 20px;
-}
-
-.box-login .card-body form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    gap: 10px;
-}
-
-.box-btn-login button{
-    border: none;
-    background-color: #b937c2;
-    border-radius: 5px;
-    padding: 6px 40px;
-    cursor: pointer;
-    font-weight: 700;
-    color: #fff;
-}
-
-.box-btn-login{
-    margin: auto;
-}
-
-.box-title-login{
-    background-color: #14017f;
-    color: #fff;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    text-align: center;    
-}
-
-.title-logo{
-    min-width: 500px;
-    /* width: 100%; */
-    /* padding: 0px 400px 0px 0px; */
-    /* text-align: center; */
-    display: flex;
-    /* margin: 20px  0 0 40px; */
-    gap: 10px;
-    align-items: center;
-    color: #fff;
-}
-
-.title-logo h1{
-    font-family: var(--fuente-logo);
-    text-transform: uppercase;
-}
-
-.title-logo img{
-    width: 65px;
-}
-/*RESPONSIVE LOGO DE ACADEMYVIEW*/
-
-nav{
-    width: 100%;
-    /* background-color: #595ae8;     */
-    height: 70px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: solid 20px #1F133B;
-}
-
-nav a{
-    font-family: var(--fuente-enlaces);
-    height: 100%;
-    padding: 0px 10px;
-    text-decoration: none;
-    color: #fff;        
-    transition: all 300ms;
-    height: 71px;
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-}
-
-nav a:hover{
-    border-bottom: solid 1px #fff;
-}
-/*==========================================================*/
-.btn-logout{
-    width: 60px;
-}
-
-.portada { 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.portada img{
-    width: 700px;
-}
-
-
-
-/* Estilos PERFIL */
-
-.boxDatos {
-    width: 100%;
-    padding: 0 100px;
-    height: 100vh;
-}
-
-.title-datos{
-    font-family: var(--fuente-logo);
-    color: #fff;
-    text-transform: uppercase;
-    font-size: large;
-}
-
-.box-perfil-btnEditar{
-    width: 150px;
-    padding: 0px 40px;
-    height: 200px;
-    border: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-}
-
-.box-perfil-btnEditar img{
-    width: 80px;
-    height: 80px;
-    margin-top: 20px;
-}
-
-.box-perfil-btnEditar h2{
-    margin: 0;
-    margin-top: 10px;
-    font-family: var(--fuente-logo);
-    color: #fff;
-    font-size: 14px;    
-}
-
-.box-perfil-btnEditar a{
-    /* width: 100px; */
-    position: absolute;
-    padding: 8px 20px;
-    font-weight: 700;
-    background-color: #b937c2;
-    font-family: var(--fuente-enlaces);
-    font-size: 8px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    border-radius: 20px;
-    bottom: -10px;
-}
-
-.box-perfil-datos{
-    /* height: 500px; */
-    display: flex;
-    align-items: center;
-}
-
-.box-datos{
-    position: relative;
-    /* padding: 10px 0; */
-    background-color: #2C1E4A;
-    display: flex;
-    flex-direction: column;    
-    gap: 5px;
-    height: 180px;
-    margin-left: -20px;
-}
-
-.box-datos-lbl-text{
+nav {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #580343;
+    color: rgb(251, 251, 251);
 }
 
-.box-datos-lbl-text p{
-    margin: 0;
-    color: #fff;
+.title-logo img {
+    height: 50px; /* Ajusta según sea necesario */
 }
 
-.box-datos-lbl-text p:last-child{
-    color: #000;
-    width: 250px;
-    padding-left: 10px;
-    background-color: #fff;
-    border-radius: 40px;
-    text-transform: capitalize;    
-}
-
-.box-buttoms{
-    margin-top: 50px;
-    display: flex;
-    gap: 10px;
-}
-
-.btn-perfil{
-    padding: 5px 20px;
-    background-color: #3f3f97;
+nav a {
+    color: white;
     text-decoration: none;
-    color: #fff;    
-    border-radius: 40px;
+    margin: 0 15px;
+    font-size: 16px;
 }
 
-/* Estilos areas */
-
-.box-areas{
-    /* width: 100%; */
-    padding-left: 20px;
-    margin-bottom: 20px;
+nav a:hover {
+    color: #ddd;
 }
 
-.box-areas h1{
-    color: #fff;
-    font-family: var(--fuente-logo);
+.table-container {
+    display: flex;
+    align-items: center;
 }
 
-.box-areas table{
-    margin-bottom: 20px;
+/* Estilos para la tabla de navegación */
+nav table {
+    display: flex;
 }
 
-.box-areas table th{
-    background-color: #242f94;
-    color: #fff;
-    padding: 10px;
+nav table tr {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.box-areas table td{
-    background-color: #fff;
-    padding: 10px;
+/* Estilos para el botón de logout */
+.btn-logout {
+    height: 70px;
+    vertical-align: middle;
+}
+
+/* Media Queries para Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-logo {
+        margin-bottom: 10px;
+    }
+
+    nav table {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+
+/* Estilos para evitar el scroll y hacer la imagen responsive */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-logo {
+        margin-bottom: 10px;
+    }
+
+    nav table {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+
+/* Estilos para el contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para el contenedor de la información */
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #7D0457; /* Color para el footer */
+    color: white;
     text-align: center;
 }
 
-.btn-regresar{  
-    background-color: #b937c2;  
-    padding: 5px 20px;
-    border-radius: 10px;
-     text-decoration: none;
-     color: #fff;     
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambia a un diseño de columna */
+        text-align: center; /* Centra los elementos en pantallas pequeñas */
+    }
+
+    .informacion-web {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-top: 20px; /* Espacio entre la imagen y la información */
+    }
 }
 
-/* Estilos table editar alumno y apoderado */
+/* Archivo: public/css/styles.css */
 
-.box-editar{
-    padding-left: 20px;
+/* Estilos para la caja de datos */
+.boxDatos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.box-editar table{
+/* Estilos para el título de datos */
+.title-datos {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.box-editar table tr{
+/* Estilos para la caja de perfil y datos */
+.box-perfil-datos {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 70px;
+    margin-bottom: 20px;
+    color: black;
+    text-decoration: solid;
+    font-style: normal;
+}
+
+/* Estilos para la imagen de perfil */
+.box-perfil-btnEditar h2 {
+    margin-bottom: 10px;
+}
+
+.box-perfil-btnEditar img {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+/* Estilos para los datos */
+.box-datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.box-datos-lbl-text {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .box-datos {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilos para el formulario de edición */
+.form-editar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-editar table {
+    width: 100%;
+}
+
+.form-editar th,
+.form-editar td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-editar th {
+    text-align: left;
+}
+
+.form-editar input[type="text"],
+.form-editar input[type="file"] {
+    width: calc(100% - 20px); /* Para compensar el padding */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-editar button {
+    padding: 10px 20px;
+    background-color: #7D0457;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-editar .btn-regresar {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #7D0457;
+    text-decoration: none;
+}
+
+.form-editar .btn-regresar:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenedor de datos del alumno */
+.boxDatosAlumno {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el título de datos */
+.title-datos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de perfil y datos del alumno */
+.box-perfil-datos-alumno {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la imagen de perfil del alumno */
+.box-perfil-btnEditar-alumno h2 {
+    margin-bottom: 10px;
+}
+
+.box-perfil-btnEditar-alumno img {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+/* Estilos para los datos del alumno */
+.box-datos-alumno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.box-datos-lbl-text {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Estilos para los botones del alumno */
+.box-buttoms-alumno {
+    text-align: center;
+}
+
+.btn-perfil-alumno {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #7D0457;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .box-datos-alumno {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilos para el contenedor de la primera tabla de áreas */
+.box-areas {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Habilitar el desplazamiento vertical */
+    max-height: 650px; /* Altura máxima del contenedor */
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla de áreas */
+.box-areas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.box-areas th,
+.box-areas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.box-areas th {
+    background-color: #7D0457;
+    color: white;
+}
+
+/* Estilos para el contenedor de la segunda tabla de resumen de asistencias */
+.box-resumen-asistencias {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Habilitar el desplazamiento vertical */
+    max-height: 500px; /* Altura máxima del contenedor */
+}
+
+/* Estilos para la tabla de resumen de asistencias */
+.box-resumen-asistencias table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.box-resumen-asistencias th,
+.box-resumen-asistencias td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.box-resumen-asistencias th {
+    background-color: #7D0457;
+    color: white;
+}
+
+/* Estilos para el botón de regresar */
+.btn-regresar-asistencias {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #7D0457;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .box-areas table,
+    .box-resumen-asistencias table {
+        font-size: 14px;
+    }
+}
+.container {
     display: flex;
-    justify-content: space-between;
 }
 
-.box-editar table th{
-    color: #fff;
+.box-areas {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre las tablas */
 }
 
-/* estilo imagen horario */
-
-.box-horario{
-    width: 100%;    
-    display: flex;
-    justify-content: center;
+.box-resumen-asistencias {
+    flex: 1;
 }
 
-.img-horario{
+/* Estilos específicos para la vista de Boleta de Notas */
+.title-boleta {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-areas-notas {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.table-boleta {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
-    width: 1000px;    
+}
+
+.table-boleta th, .table-boleta td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-boleta th {
+    background-color: #f2f2f2;
+}
+
+.table-boleta tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-regresar:hover {
+    background-color: #45a049;
+}
+/* Estilos específicos para la vista de Areas Registradas */
+.title-areas-registradas {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-areas-registradas {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.table-areas-registradas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-areas-registradas th, .table-areas-registradas td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-areas-registradas th {
+    background-color: #f2f2f2;
+}
+
+.table-areas-registradas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-regresar:hover {
+    background-color: #45a049;
+}
+/* Estilos específicos para la vista de Información del Área */
+.title-area-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-areas-info {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.table-area-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-area-info th, .table-area-info td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-area-info th {
+    background-color: #f2f2f2;
+}
+
+.table-area-info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.title-horario {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.table-horario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-horario th, .table-horario td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-horario th {
+    background-color: #f2f2f2;
+}
+
+.table-horario tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-regresar:hover {
+    background-color: #45a049;
 }

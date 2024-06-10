@@ -1,13 +1,11 @@
 @extends('layout')
 @section('title','Areas Registradas')
-    @section('content')
+@section('content')
 
-    <div class="box-areas">
-
-        <h1>Areas Registradas</h1>
-        
-        <table>
-            
+<div class="container-areas-registradas">
+    <div class="box-areas-registradas">
+        <h1 class="title-areas-registradas">Areas Registradas</h1>
+        <table class="table-areas-registradas">
             <tr>
                 <th>AreaID</th>
                 <th>NOMBRE DEL AREA</th>
@@ -17,42 +15,37 @@
                 <th>HORARIO ATENCION</th>
             </tr>
             @if ($areas->count() > 0)
-            @foreach ($areas as $area)
+                @foreach ($areas as $area)
+                    <tr>
+                        <td>{{ $area->AreaID }}</td>
+                        <td>{{ $area->Descripcion }}</td>
+                        <td>
+                            @foreach ($area->detalleAreas as $detalle)
+                                @if ($loop->first)
+                                    {{ $detalle->alumno->gradoSeccion->seccion->Descripcion }}
+                                @endif
+                            @endforeach
+                        </td>
+                        <td>
+                            @foreach ($area->detalleAreas as $detalle)
+                                @if ($loop->first)
+                                    {{ $detalle->alumno->gradoSeccion->grado->Descripcion }}
+                                @endif
+                            @endforeach
+                        </td>
+                        <td>{{ $area->docente->Apellidos.','.$area->docente->Nombres }}</td>
+                        <td><a href="{{route('areas.show',$area)}}">Ver Aquí</a></td>
+                    </tr>
+                @endforeach
+            @else
                 <tr>
-                    <td>{{ $area->AreaID }}</td>
-                    <td>{{ $area->Descripcion }}</td>
-                    <td>
-                        @foreach ($area->detalleAreas as $detalle)
-                            @if ($loop->first) <!-- Mostrar la sección solo una vez por área -->
-                                {{ $detalle->alumno->gradoSeccion->seccion->Descripcion }}
-                            @endif
-                        @endforeach
-                    </td>
-                    <td>
-                        @foreach ($area->detalleAreas as $detalle)
-                            @if ($loop->first) <!-- Mostrar el grado solo una vez por área -->
-                                {{ $detalle->alumno->gradoSeccion->grado->Descripcion }}
-                            @endif
-                        @endforeach
-                    </td>
-                    <td>{{ $area->docente->Apellidos.','.$area->docente->Nombres }}</td>
-                    <td><a href="{{route('areas.show',$area)}}">Ver Aquí</a></td>
+                    <td colspan="6">No Hay Datos Para Mostrar</td>
                 </tr>
-                
-            @endforeach
- 
-        @else
-            <tr>
-                <td colspan="6">No Hay Datos Para Mostrar</td>
-            </tr>
-        @endif
-        
-        
-    </table>
+            @endif
+        </table>
 
-    <a class="btn-regresar" href="{{route('alumno.index')}}">REGRESAR</a>
+        <a class="btn-regresar" href="{{route('alumno.index')}}">REGRESAR</a>
     </div>
-        
-        
+</div>
 
 @endsection

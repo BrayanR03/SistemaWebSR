@@ -2,60 +2,60 @@
 @section('title','Alumno')
 @section('content')
 
-    <div class="boxDatos">
+    <div class="boxDatosAlumno">
         <h1 class="title-datos">Datos Básicos</h1>
     
         @if ($alumno)
-            @foreach ($alumno as $alumno)
+            @foreach ($alumno as $alum)
             {{-- <table> --}}
                 {{-- <tr> --}}
 
-                    <div class="box-perfil-datos">
-                        <div class="box-perfil-btnEditar">
+                    <div class="box-perfil-datos-alumno">
+                        <div class="box-perfil-btnEditar-alumno">
                             <h2>PERFIL</h2>
-                            @if ($alumno->image)
-                        <img src="/storage/{{$alumno->image}}" alt="{{$alumno->Nombres}}" width="50" height="50">
+                            @if ($alum->image)
+                        <img src="/storage/{{$alum->image}}" alt="{{$alum->Nombres}}" width="80" height="80">
                     @endif
     
-                    <a href="{{route('alumno.edit',$alumno)}}">EDITAR PERFIL</a>
+                    <a href="{{route('alumno.edit',$alum)}}">EDITAR PERFIL</a>
                         </div>
     
-                        <div class="box-datos">
+                        <div class="box-datos-alumno">
                             <div class="box-datos-lbl-text">
                                 <p>AlumnaID</p>
-                                <p>{{$alumno->alumno->AlumnoID}}</p>
+                                <p>{{$alum->alumno->AlumnoID}}</p>
                             </div>
                             <div class="box-datos-lbl-text">
                                 <p>APELLIDO</p>
-                                <p>{{$alumno->alumno->Apellidos}}</p>
+                                <p>{{$alum->alumno->Apellidos}}</p>
                             </div>
                             <div class="box-datos-lbl-text">
                                 <p>GRADO</p>
-                                <p>{{$alumno->gradoSeccion->grado->Descripcion}}</p>
+                                <p>{{$alum->gradoSeccion->grado->Descripcion}}</p>
                             </div>                        
                             <div class="box-datos-lbl-text">
                                 <p>NOMBRES</p>
-                                <p>{{$alumno->alumno->Nombres}}</p>
+                                <p>{{$alum->alumno->Nombres}}</p>
                             </div>
 
                             
                            <div class="box-datos-lbl-text">
                             <p>DNI</p>
-                            <p>{{$alumno->alumno->Dni}}</p>
+                            <p>{{$alum->alumno->Dni}}</p>
                            </div>
                            <div class="box-datos-lbl-text">
                             <p>SECCION</p> 
-                            <p>{{$alumno->gradoSeccion->seccion->Descripcion}}</p>
+                            <p>{{$alum->gradoSeccion->seccion->Descripcion}}</p>
                            </div>
 
                            <div class="box-datos-lbl-text">
                             <p>FECHA NACIMIENTO</p>
-                            <p>{{$alumno->alumno->FechaNacimiento}}</p>
+                            <p>{{$alum->alumno->FechaNacimiento}}</p>
                            </div>
 
                            <div class="box-datos-lbl-text">
                             <p>TELEFONO</p>
-                            <p>{{$alumno->alumno->Telefono}}</p>
+                            <p>{{$alum->alumno->Telefono}}</p>
                            </div>
 
                         </div>
@@ -75,11 +75,11 @@
         @else
             <h1>No hay Datos Para Mostrar</h1>
         @endif
-                <div class="box-buttoms">
-                    <a class="btn-perfil" href="{{route('asistencias.index')}}">ASISTENCIAS</a>
-                    <a class="btn-perfil"  href="{{route('areas.index')}}">AREAS REGISTRADAS</a>
-                    <a class="btn-perfil"  href="{{route('boletanotas.index',['alumnaID'=>$alumno->alumno->AlumnoID])}}">BOLETA DE NOTAS</a>
-                    <a class="btn-perfil"  href="{{route('apoderado.index')}}">MI APODERADO</a>     
+                <div class="box-buttoms-alumno">
+                    <a class="btn-perfil-alumno" href="{{route('asistencias.index')}}">ASISTENCIAS</a>
+                    <a class="btn-perfil-alumno"  href="{{route('areas.index')}}">AREAS REGISTRADAS</a>
+                    <a class="btn-perfil-alumno"  href="{{route('boletanotas.index',['alumnaID'=>$alum->alumno->AlumnoID])}}">BOLETA DE NOTAS</a>
+                    <a class="btn-perfil-alumno"  href="{{route('apoderado.index')}}">MI APODERADO</a>     
                 </div>   
     </div>
 

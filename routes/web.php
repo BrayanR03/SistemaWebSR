@@ -19,6 +19,11 @@ Route::get('/',function(){
 //Route::view('/','home');
 Route::get('areas','App\Http\Controllers\AreaController@index')->name('areas.index');
 
+
+
+
+
+
 Route::post('login','App\Http\Controllers\Auth\LoginController@valida')->name('login.val');
 
 Route::get('apoderado/{apoderado}/editar','App\Http\Controllers\ApoderadoController@edit')->name('apoderado.edit');
@@ -46,6 +51,6 @@ Route::get('boletanotas/{alumnaID}','App\Http\Controllers\DetalleAreaController@
 
 Route::view('horario','horario')->name('horario');
 
-Auth::routes(['register'=>false]);
+Auth::routes(['register'=>true]);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
