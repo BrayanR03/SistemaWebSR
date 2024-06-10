@@ -561,3 +561,82 @@ html, body {
 .btn-regresar:hover {
     background-color: #45a049;
 }
+
+/* Estilos para el formulario de inicio de sesión */
+.container {
+    margin-top: 50px;
+}
+
+.box-login {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.box-title-login {
+    background-color: #580343;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.invalid-feedback {
+    color: #ff0000;
+}
+
+.box-btn-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #580343;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #4b0226;
+}
+
+@media (max-width: 768px) {
+    .box-login {
+        margin-top: 20px;
+    }
+
+    .card {
+        border-radius: 0;
+        border-top: none;
+    }
+
+    .box-title-login {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}

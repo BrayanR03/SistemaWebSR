@@ -7,15 +7,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'DIWISE DIGILTAL') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{asset('styles.css')}}">
     <!-- Scripts -->
    {{-- @vite(['public/css/app.css', 'resources/js/app.js'])--}}
-   @vite(['resources/css/app.css', 'resources/js/app.js'])
+   @vite(['resources/js/app.js'])
 
 </head>
 <body>
