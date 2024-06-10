@@ -1,7 +1,74 @@
 @extends('layout')
 @section('title','Alumno')
 @section('content')
+<style>
+    
+/* Estilos para el contenedor de datos del alumno */
+.boxDatosAlumno {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+/* Estilos para el título de datos */
+.title-datos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de perfil y datos del alumno */
+.box-perfil-datos-alumno {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la imagen de perfil del alumno */
+.box-perfil-btnEditar-alumno h2 {
+    margin-bottom: 10px;
+}
+
+.box-perfil-btnEditar-alumno img {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+/* Estilos para los datos del alumno */
+.box-datos-alumno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.box-datos-lbl-text {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Estilos para los botones del alumno */
+.box-buttoms-alumno {
+    text-align: center;
+}
+
+.btn-perfil-alumno {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #7D0457;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .box-datos-alumno {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
     <div class="boxDatosAlumno">
         <h1 class="title-datos">Datos Básicos</h1>
     
